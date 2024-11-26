@@ -3,28 +3,13 @@
 
 ## Objective
 
-This library is designed to estimate biophysical variables such as LAI (Leaf Area Index), fIPAR (Fraction of Incoming Photosynthetically Active Radiation), and other related traits derived from UAV data using configurable empirical models, specifically Random Forest (RF) and Neural Networks (NN). The goal is to facilitate biophysical parameter extraction for applications in precision agriculture and ecological research.
+This library is designed to estimate biophysical variables such as LAI (Leaf Area Index), fIPAR (Fraction of Incoming Photosynthetically Active Radiation), and other related traits derived from UAV data using configurable empirical models, specifically Random Forest (RF) and Neural Networks (NN).
 
 The library provides:
 
 1. **Data Preprocessing**: Processes UAV-derived datasets, ensuring compatibility for model training and inference.
 2. **Model Training and Testing**: Includes tools to configure, train, and validate RF and NN models for biophysical variable estimation.
 3. **Inference**: Applies trained models to predict biophysical variables on new datasets.
-
----
-
-## Features
-
-### Biophysical Variables Extracted
-
-- **LAI (Leaf Area Index)**: Quantifies canopy density and leaf area.
-- **fIPAR (Fraction of Incoming Photosynthetically Active Radiation)**: Indicates the fraction of light intercepted by the canopy.
-- **Additional Traits**: The library is extensible to estimate other biophysical variables with appropriate data and model configurations.
-
-### Supported Models
-
-- **Random Forest (RF)**: Ensemble-based regressor with configurable hyperparameters.
-- **Neural Networks (NN)**: Fully connected networks with customizable architecture.
 
 ---
 
@@ -40,6 +25,8 @@ To use this project, ensure you have Python 3.x installed. Then, clone the repos
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
+   conda env --create -f uav-biophysical-estimation.yml
+   conda env update -f uav-biophysical-estimation.yml
 
 
 ## Requirements
@@ -60,6 +47,21 @@ This project requires the following libraries:
 - `scikit-image`
 
 ---
+
+## DEMO
+
+
+In the `utils` folder, there are two Excel files provided for testing purposes:
+
+1. `example_dataset_train_val_test.xlsx`: This file is used to create the data splits (training, validation, and testing) and train the model.
+
+2. `example_dataset_predict.xlsx`: This file evaluates the model's performance on a separate dataset.
+
+
+[Provide instructions or links for running the demo here, if applicable.]
+
+
+
 
 ## Main Scientific References
 
